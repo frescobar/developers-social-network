@@ -1,8 +1,13 @@
 const express = require("express");
+const connectDB = require("./config/db");
+
 const app = express();
 
+//connect database
+connectDB();
+
 app.get("/", (req, res) => {
-  res.send("GET request to the homepage");
+  res.send("request to the homepage");
 });
 
 const PORT = process.env.PORT || 5000;
